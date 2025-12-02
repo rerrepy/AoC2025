@@ -1,13 +1,18 @@
-dial=50
-prev_dial=50
-code=0
-with open ('day1.txt', 'r') as file:
+dial = 50  # This will grow infinitely (e.g. 1050, -200, etc)
+code = 0
+
+with open('day1.txt', 'r') as file:
     for line in file:
-        rotation=int(line.strip()[1:])
+        rot=int(line.strip()[1:])
+        
         if line[0] == 'L':
-            dial -= rotation
+            new_dial = dial - rot
+            code += ((dial - 1) // 100) - ((new_dial - 1) // 100)
+            dial = new_dial
         else:
-            dial += rotation
-        if dial % 100 == 0:
-            code += 1
+            new_dial = dial + rot
+            code += (new_dial // 100) - (dial // 100)
+            dial = new_dial
+            
+
 print(code)
