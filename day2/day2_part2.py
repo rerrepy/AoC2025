@@ -8,7 +8,6 @@ def sum_invalid(i):
                 return int(i)
     return 0
 
-
 invalid_id_sum=0
 with open ('day2.txt', 'r') as file:
     for line in file:
