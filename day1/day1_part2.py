@@ -1,4 +1,4 @@
-dial = 50  # This will grow infinitely (e.g. 1050, -200, etc)
+dial = 50
 code = 0
 
 with open('day1.txt', 'r') as file:
