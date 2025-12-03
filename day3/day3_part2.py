@@ -11,7 +11,7 @@ with open ('day3.txt', 'r') as file:
             # How much space we must leave on the right side to fit all remaining digits
             leave_space = len(bank)-(11 - i)
             highest_digit = max(bank[offset:leave_space])
-            # Add offset because we do find on a subset of the digits, specifically 'offset' number of digits ahead.
+            # Add offset because we do 'find' on a subset of the digits, specifically 'offset' number of digits ahead.
             index_highest_digit = bank[offset:leave_space].find(highest_digit) + offset
             current_joltage += highest_digit
         joltage += int(current_joltage)
