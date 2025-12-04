@@ -8,8 +8,6 @@ def nb_count(ix_x, ix_y, paper):
                 if x == 0 and y == 0:
                     continue
                 if paper[ix_y + y][ix_x + x] == '@':
-                    #print(ix_y, y, ix_x, x)
-                    #print(paper[ix_y + y][ix_x + x])
                     nb_paper += 1
     return nb_paper
     
@@ -19,7 +17,7 @@ sum_paper = 0
 with open('day4.txt', 'r') as file:
     for line in file.readlines():
         paper_arr.append(line.strip())
-        
+    
 for y in range(0, len(paper_arr)):
     for x in range (0, len(paper_arr[0])):
         if paper_arr[y][x] == '@': 
