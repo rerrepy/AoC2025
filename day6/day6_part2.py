@@ -6,7 +6,6 @@ with open('day6.txt', 'r') as file:
     for line in file:
         problems.append(line.strip('\n'))
 
-
 operators = problems[-1].split()
 del problems[-1]
 
@@ -29,12 +28,9 @@ for x in range(len(problems[0])):
     else:
         total_ints.append(int_list)
         int_list = []
-
 total_ints.append(int_list)
 
-
 current_tot = 0
-
 for i, current_digits in enumerate(total_ints):
     current_operator = operators[i]
     if current_operator == '+':
