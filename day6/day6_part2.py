@@ -12,7 +12,7 @@ del problems[-1]
 
 def is_blank_column(arr, x):
     for y in range(len(arr)):
-        if arr[y][x] != ' ' and arr[y][x] != '':
+        if arr[y][x] != ' ':
             return False
     return True
 
